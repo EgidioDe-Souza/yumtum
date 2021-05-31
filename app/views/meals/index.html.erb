@@ -1,1 +1,11 @@
-<h1>FOOD!</h1>
+<h1>Meals</h1>
+<div class="meal_container">
+  <ul>
+    <% @meals.each do |meal| %>
+      <div>
+        <li><%= meal.name %>
+        <img src="" /></li>
+      </div>
+    <% end %>
+  </ul>
+</div>

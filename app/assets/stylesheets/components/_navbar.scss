@@ -10,3 +10,26 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.btn-flat {
+  padding: 5px 8px;
+  border-radius: 40px;
+  background: #EACA5A;
+  color:white;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #F5C51A;
+  color: white;
+}
+
+
+.nav-link {
+  color: #F5C51A;
+  font-size: 25px;
+}
+
+.nav-link:hover {
+  color: #F5C51A;
+}

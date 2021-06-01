@@ -3,8 +3,11 @@
   <ul>
     <% @meals.each do |meal| %>
       <div>
-        <li><%= meal.name %>
-        <img src="" /></li>
+        <li>
+          <%= meal.name %>
+          <img src="https://images.unsplash.com/photo-1593759608142-e9b18c0dbe86" width='280' height='245' />
+          <%= meal.description %>
+        </li>
       </div>
     <% end %>
   </ul>

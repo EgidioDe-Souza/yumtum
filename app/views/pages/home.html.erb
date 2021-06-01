@@ -7,9 +7,12 @@
 
   <div class="search-form-control form-group">
     <input class="form-control string required" placeholder= "Enter your current postcode..." type="text" name="postcode" id="search_query" />
-    <button name="button" type="submit" class="btn btn-flat">
+<!--     <button name="button"  class="btn btn-flat">
       <i class="fas fa-search"></i> Search
     </button>
-
+ -->
+  <button name="button"  class="btn btn-flat">
+    <i class="fas fa-search"></i> <%= link_to "Search", meals_path %>
+  </button>
 </div>
 </form>

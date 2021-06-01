@@ -1,3 +1,55 @@
 // Import page-specific CSS files here.
 @import "home";
 
+h1 {
+  padding-left: 45px;
+
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  padding: 40px;
+  margin-bottom: 150px;
+
+}
+
+.card-meal {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-color:#EACA5A;
+  border-style: solid;
+}
+
+.card-meal > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-meal h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-meal p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.text {
+  padding:25px;
+}
+
+.card-meal-pricing {
+  padding: 10px;
+}
+
+.card-meal .card-meal-descr {
+  display: flex;
+
+  position: relative;
+}

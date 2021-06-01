@@ -1,14 +1,19 @@
 <h1>Meals</h1>
-<div class="meal_container">
-  <ul>
-    <% @meals.each do |meal| %>
-      <div>
-        <li>
-          <%= meal.name %>
-          <img src="https://picsum.photos/400/300/?random=<%= meal.id %>" />
-          <%= meal.description %>
-        </li>
+
+
+<div class="cards">
+<% @meals.each do |meal| %>
+<div class="card-meal">
+<img src="https://picsum.photos/400/300/?random=<%= meal.id %>" />
+  <div class="card-meal-descr">
+      <div class="text">
+        <h2><%= meal.name %></h2>
+        <p><%= meal.description %></p>
       </div>
-    <% end %>
-  </ul>
+      <h2 class="card-meal-pricing"><%= meal.price%></h2>
+
+  </div>
 </div>
+<% end %>
+</div>
+

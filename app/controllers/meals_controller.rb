@@ -2,7 +2,7 @@ class MealsController < ApplicationController
   # before_action :set_meal, only: [:show]
 
   def index
-    @meals = Meal.where(postcode.split('_').first = params[:postcode].split('+').first)
+    @meals = Meal.all
   end
 
   def show; end

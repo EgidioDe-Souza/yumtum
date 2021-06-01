@@ -13,6 +13,8 @@ class MealsController < ApplicationController
 
   def create
     @meal = Meal.new(meal_params)
+    @chef = current_user
+    @meal.chef = @chef
     if @meal.save
       redirect_to @meal
     else

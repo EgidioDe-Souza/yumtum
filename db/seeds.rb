@@ -1,11 +1,16 @@
 DatabaseCleaner.clean_with(:truncation)
+AREA = %w(BN1 GL18 TD7)
+ALPH = ('A'..'Z').to_a
 
 # generate users
 12.times do
   email = Faker::Internet.email
   password = 'changeme'
-  puts "Creating user account for #{email}"
-  User.create!(email: email, password: password)
+  first_name = Faker::Name.first_name
+  last_name = Faker::Name.last_name
+  postcode = "#{AREA[rand(0..2)]} #{ALPH[rand(0..25)]}#{rand(0..9)}#{rand(0..9)}"
+  puts "Creating user account for #{first_name} #{last_name}"
+  User.create!(email: email, password: password, first_name: first_name, last_name: last_name, postcode: postcode)
   puts "User created"
 end
 

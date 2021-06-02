@@ -5,7 +5,8 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-color:#EACA5A;
     border-style: solid;
-    margin: 0px 150px;
+    margin: 60px 150px;
+    margin-bottom: 20px;
   }
 
   .card-trip > img {
@@ -14,27 +15,27 @@
     object-fit: cover;
   }
 
-  .card-trip h2 {
-    font-size: 16px;
+  .card-trip h1 {
+    // font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
+    padding-bottom: 40px;
+    
   }
 
   .card-trip p {
     font-size: 12px;
-    opacity: .7;
+    opacity: 0.7;
     margin: 0;
+    padding: 0px 240px;
   }
-  .card-trip .card-trip-infos {
-    // padding: 16px;
+  .flex  {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-end;
     position: relative;
   }
 
-  .float {
-   float: right;
-  }
 
 
 

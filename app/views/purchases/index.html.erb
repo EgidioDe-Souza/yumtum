@@ -1,0 +1,6 @@
+<% @purchases.each do |purchase| %>
+<p>Meal: <%=purchase.meal.name%></p>
+<p>Quantity: <%=purchase.quantity%></p>
+<p>Price: <%=purchase.meal.price%></p>
+<p>Total: <%=purchase.meal.price * purchase.quantity %></p>
+<% end %>

@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  # before_action :set_meal, only: [:show]
+  before_action :set_meal, only: [:show]
 
   def index
     @meals = Meal.all

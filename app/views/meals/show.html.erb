@@ -1,13 +1,8 @@
-<%= link_to 'Back', meals_path %>
-<div class="card-trip text-center" >
-<!--   <h2><%= @meal.id %>.</h2>
- -->
+<div class="card-trip flex " >
   <img src="http://lorempixel.com/400/300/food/?random=<%= @meal.id %>"/>
   <h1><%= @meal.description %></h1>
   <h1>£<%= @meal.price %></h1>
-  <%= link_to 'Back', meals_path, class: "btn btn-flat" %>
-  <%= link_to 'purchase', new_purchase_path, class: "btn btn-flat"%>
+  <%= link_to 'Back', meals_path, class: "btn btn-flat m-3" %>
+  <%= link_to 'Purchase', new_purchase_path, class: "btn btn-flat m-3"%>
 </div>
 
-
-<%# <%= link_to 'Add a Meal', new_meal_path %>

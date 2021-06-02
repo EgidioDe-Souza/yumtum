@@ -1,10 +1,12 @@
 $peach: #FB9F6C;
 $red: #FF0000;
+$darkpeach: #b36338;
+$darkred: #960000;
 $gold: #EACA5A;
 $yellow: #F5C51A;
+$lightestyellow: #fffde3;
 
 .navbar-lewagon {
-  text-decoration: none;
   justify-content: space-between;
   background: white;
   height: 50px;
@@ -30,14 +32,5 @@ $yellow: #F5C51A;
   &:hover {
     background: $yellow;
     color: white;
-  }
-}
-
-.nav-link {
-  font-size: 25px;
-  color: $gold;
-  text-decoration: none;
-  &:hover {
-    color: $yellow;
   }
 }

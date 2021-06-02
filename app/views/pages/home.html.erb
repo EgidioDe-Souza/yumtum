@@ -1,16 +1,10 @@
-  <h2>Connecting hungry tums to local yums</h2>
+<h2>Connecting hungry tums to local yums</h2>
 
 <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-
   <div class="search-form-control form-group">
     <input class="form-control string required" placeholder= "Enter your current postcode..." type="text" name="postcode" id="search_query" />
-<!--     <button name="button"  class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
- -->
-<%= link_to ' <button name="button"  class="btn btn-flat">
-    <i class="fas fa-search"></i>Search
-  </button> '.html_safe, meals_path %>
-
-</div>
+    <%= link_to ' <button name="button"  class="btn btn-flat">
+      <i class="fas fa-search"></i>Search
+    </button> '.html_safe, meals_path %>
+  </div>
 </form>

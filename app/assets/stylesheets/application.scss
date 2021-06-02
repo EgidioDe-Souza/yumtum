@@ -11,7 +11,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pages/show"; 
+@import "pages/show";
 @import "components/footer";
 @import "components/navbar";
 @import "pages/new";
@@ -27,6 +27,7 @@ html, body {
   min-height: 100%;
   position: absolute;
   top: 0;
+  width: 100%;
 }
 
 #header {
@@ -34,6 +35,7 @@ html, body {
 }
 
 #main-content {
+  padding-top: 50px;
   min-height: calc(100vh - 118px);
 }
 

@@ -1,0 +1,16 @@
+@import "home";
+
+.new-form {
+  width: 500px;
+  margin: auto;
+  padding: 40px;
+  background-color: white;
+  border: 4px solid #EACA5A;
+}
+.simple_form .form-control:focus {
+  border: 1px solid #EACA5A;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+

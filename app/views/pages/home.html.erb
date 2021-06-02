@@ -1,7 +1,5 @@
-
-<div class="landing-text">
+<div class="container">
   <h2>Connecting hungry tums to local yums</h2>
-</div>
 
 <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
 
@@ -11,8 +9,10 @@
       <i class="fas fa-search"></i> Search
     </button>
  -->
-  <button name="button"  class="btn btn-flat">
-    <i class="fas fa-search"></i> <%= link_to "Search", meals_path %>
-  </button>
+<%= link_to ' <button name="button"  class="btn btn-flat">
+    <i class="fas fa-search"></i>Search
+  </button> '.html_safe, meals_path %>
+
 </div>
 </form>
+</div>

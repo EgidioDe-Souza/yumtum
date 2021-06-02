@@ -33,7 +33,7 @@ html, body {
 }
 
 #main-content {
-  padding-bottom: 140px;
+  min-height: calc(100vh - 118px);
 }
 
 #footer {

@@ -5,7 +5,7 @@
 <% @meals.each do |meal| %>
 <div class="card-meal">
   <%= link_to show_meal_path(meal) do %>
-  <%= image_tag "https://picsum.photos/400/300/?random=#{meal.id}"%>
+  <%= image_tag "http://lorempixel.com/400/300/food/?random=#{meal.id}"%>
   <% end %>
   <div class="card-meal-descr">
       <div class="text">

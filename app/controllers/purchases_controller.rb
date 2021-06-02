@@ -8,6 +8,9 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new
   end
 
+  def show;
+  end
+
   def create
     @meal = Meal.find(params[:id])
     @buyer = current_user
@@ -24,6 +27,11 @@ class PurchasesController < ApplicationController
 
   def purchase_params
     params.require(:purchase).permit(:quantity)
+  end
+
+  def destroy
+    @purchase = Purchase.find(params[:id])
+    @purchase.delete
   end
 
 end

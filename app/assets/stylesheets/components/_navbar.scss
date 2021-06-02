@@ -1,6 +1,16 @@
+$peach: #FB9F6C;
+$red: #FF0000;
+$gold: #EACA5A;
+$yellow: #F5C51A;
+
 .navbar-lewagon {
+  text-decoration: none;
   justify-content: space-between;
   background: white;
+  height: 8vh;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,22 +24,20 @@
 .btn-flat {
   padding: 5px 8px;
   border-radius: 40px;
-  background: #EACA5A;
+  background: $gold;
   color:white;
   transition: background 0.3s ease;
+  &:hover {
+    background: $yellow;
+    color: white;
+  }
 }
-
-.btn-flat:hover {
-  background: #F5C51A;
-  color: white;
-}
-
 
 .nav-link {
-  color: #F5C51A;
   font-size: 25px;
-}
-
-.nav-link:hover {
-  color: #F5C51A;
+  color: $gold;
+  text-decoration: none;
+  &:hover {
+    color: $yellow;
+  }
 }

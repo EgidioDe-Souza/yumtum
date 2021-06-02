@@ -3,14 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 20vh;
-  padding: 0px 50px;
-  color:  #F5C51A;
-  position: fixed;
-  padding: 10px 10px 0px 10px;
-  bottom: 0;
+  padding: 10px;
   width: 100%;
 }
+
 footer > p {
   margin: 2rem;
 }
@@ -18,24 +14,25 @@ footer > p {
 footer i {
   vertical-align: middle;
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
 .footer-links a {
-  color: #F5C51A;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 
 .footer-link {
-  color: #F5C51A;
   font-size: 25px;
-}
-
-.footer-link:hover {
-  color: #F5C51A;
+  color: $gold;
+  text-decoration: none;
+  &:hover {
+    color: $yellow;
+  }
 }
 
 .flex {
@@ -46,5 +43,3 @@ footer i {
 .text-center {
  text-align: center;
 }
-
-

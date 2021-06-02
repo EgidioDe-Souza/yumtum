@@ -1,13 +1,15 @@
-<h1>Meals</h1>
 
+<h1>Meals</h1>
 
 <div class="cards">
 <% @meals.each do |meal| %>
 <div class="card-meal">
-<img src="https://picsum.photos/400/300/?random=<%= meal.id %>" />
+  <%= link_to show_meal_path(meal) do %>
+  <%= image_tag "https://picsum.photos/400/300/?random=#{meal.id}"%>
+  <% end %>
   <div class="card-meal-descr">
       <div class="text">
-        <h2><%= meal.name %></h2>
+        <h3><%= meal.name %></h3>
         <p><%= meal.description %></p>
       </div>
       <h2 class="card-meal-pricing"><%= meal.price%></h2>

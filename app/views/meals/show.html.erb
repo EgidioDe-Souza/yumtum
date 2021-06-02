@@ -1,1 +1,17 @@
-<%= link_to 'Back', meals_path %> 
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Yay!</strong> 🎉 great choice!.</span>
+  <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
+</div>
+
+<div class="show-meal text-center ">
+  <h1><%= @meal.id %>.</h1>
+  <img src="https://picsum.photos/400/300/?random=<%= @meal.id %>"/>
+  <h1><%= @meal.description %></h1>
+  <h1>£<%= @meal.price %></h1>
+  <%= link_to 'Back', meals_path %> 
+</div>
+
+
+<%# <%= link_to 'Add a Meal', new_meal_path %>  

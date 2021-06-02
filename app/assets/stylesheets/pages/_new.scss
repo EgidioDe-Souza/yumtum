@@ -22,7 +22,6 @@
 .form-control {
   border: 1px solid rgba(0,0,0,0.2);
   text-decoration: none;
-  color:white;
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
@@ -35,9 +34,9 @@
 }
 
 .simple_form > input {
+  color: white;
   padding: 10px 0;
   text-decoration: none;
-  color:white;
   background-color: #EACA5A;
   border-radius: 32px;
   width: 32%;

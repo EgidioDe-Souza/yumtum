@@ -1,11 +1,12 @@
-<div class="card-trip text-center">
-  <h2><%= @meal.id %>.</h2>
-   <%= link_to 'Back', meals_path %> 
+<%= link_to 'Back', meals_path %>
+<div class="card-trip text-center" >
+<!--   <h2><%= @meal.id %>.</h2>
+ -->
   <img src="https://picsum.photos/400/300/?random=<%= @meal.id %>"/>
   <h1><%= @meal.description %></h1>
   <h1>£<%= @meal.price %></h1>
-  <%= link_to 'Back', meals_path %>
-  <%= link_to 'purchase', new_purchase_path %>
+  <%= link_to 'Back', meals_path, class: "btn btn-flat" %>
+  <%= link_to 'purchase', new_purchase_path, class: "btn btn-flat"%>
 </div>
 
 

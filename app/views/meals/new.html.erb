@@ -1,7 +1,9 @@
+<div class="new-form">
 <h1>Create a new meal</h1>
 <%= simple_form_for @meal do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :price %>
-  <%= f.submit %>
+<%= f.submit class: "btn btn-flat"%>
 <% end %>
+</div>

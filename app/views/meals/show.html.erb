@@ -2,7 +2,7 @@
 <div class="card-trip text-center" >
 <!--   <h2><%= @meal.id %>.</h2>
  -->
-  <img src="https://picsum.photos/400/300/?random=<%= @meal.id %>"/>
+  <img src="http://lorempixel.com/400/300/food/?random=<%= @meal.id %>"/>
   <h1><%= @meal.description %></h1>
   <h1>£<%= @meal.price %></h1>
   <%= link_to 'Back', meals_path, class: "btn btn-flat" %>

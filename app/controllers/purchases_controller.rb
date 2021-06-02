@@ -9,17 +9,21 @@ class PurchasesController < ApplicationController
   end
 
   def create
-    @meal = Meal.find(params[:meal_id])
-    @purchase = Purchase.new(@meal)
+    @meal = Meal.find(params[:id])
     @buyer = current_user
-    @chef = meal
+
+    @purchase = Purchase.new(purchase_params)
+    @purchase.meal = @meal
     @purchase.buyer = @buyer
-    @purchase.chef = @chef
     if @purchase.save
       redirect_to purchases_path
     else
       render :new
     end
+  end
+
+  def purchase_params
+    params.require(:purchase).permit(:quantity)
   end
 
 end

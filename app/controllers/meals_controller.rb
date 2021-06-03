@@ -2,7 +2,12 @@ class MealsController < ApplicationController
   before_action :set_meal, only: [:show]
 
   def index
-    @meals = Meal.all
+    if params[:postcode] == ''
+      @meals = Meal.all
+    else
+      postcode = params[:postcode].split.first
+      @meals = Meal.search_by_chef_location(postcode)
+    end
   end
 
   def show; end

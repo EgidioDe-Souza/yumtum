@@ -10,7 +10,6 @@ class PurchasesController < ApplicationController
 
   def show
     @buyer = current_user
-    @purchases = Purchase.
 
   end
 

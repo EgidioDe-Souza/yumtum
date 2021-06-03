@@ -5,8 +5,8 @@ class MealsController < ApplicationController
     if params[:postcode] == ''
       @meals = Meal.all
     else
-      postcode = params[:postcode].split.first
-      @meals = Meal.search_by_chef_location(postcode)
+      @postcode = params[:postcode].split.first
+      @meals = Meal.search_by_chef_location(@postcode)
     end
   end
 

@@ -7,8 +7,13 @@
       <p>Sorry, but there aren't any chefs in your local area just yet!</p>
       <p class='sign-up-hint'>Try checking back later... or why not sign up as a chef yourself?</p>
     </div>
-  <% else %>
+  <% elsif @postcode %>
     <div><p>We found <%= @meals.count %> meals for sale from chefs in your local area!</p></div>
+  <% else %>
+    <div>
+      <p>We found <%= @meals.count %> meals for sale from chefs globally!</p>
+      <p class='sign-up-hint'>Why not sign up to find something delicious for your Tum, or make some Yums to share?</p>
+    </div>
   <% end %>
 </div>
 

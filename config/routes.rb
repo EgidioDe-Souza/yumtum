@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/meals/:id/purchases/new', to: 'purchases#new' , as: 'new_purchase'
   post '/meals/:id/purchases', to: 'purchases#create', as:   'create_purchase'
   get '/purchases', to: 'purchases#index'
+  get '/purchases/:id', to: 'purchases#show', as: 'show_purchase'
+
 
   resources :purchases, only: :destroy
 

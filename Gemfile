@@ -36,6 +36,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'faker'
 gem 'database_cleaner'
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'pry-byebug'

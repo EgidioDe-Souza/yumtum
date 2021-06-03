@@ -1,7 +1,8 @@
 <div class="new-form">
 <h1>Purchase</h1>
+<p><%= Meal.find(params[:id]).name %></p>
 <%= simple_form_for  @purchase, url: create_purchase_path  do |f| %>
-  <%= f.input :quantity %>
+<%= f.input :quantity %>
 
 <%= f.submit class: "btn btn-flat"%>
 <% end %>

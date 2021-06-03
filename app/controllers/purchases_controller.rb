@@ -8,7 +8,9 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new
   end
 
-  def show;
+  def show
+    @buyer = current_user
+
   end
 
   def create
@@ -18,20 +20,19 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new(purchase_params)
     @purchase.meal = @meal
     @purchase.buyer = @buyer
-    if @purchase.save
-      redirect_to purchases_path
-    else
-      render :new
-    end
+    @purchase.save
+    redirect_to purchases_path
+  end
+
+
+  def destroy
+    purchase = Purchase.find(params[:id])
+    purchase.destroy
+    redirect_to purchases_path
   end
 
   def purchase_params
     params.require(:purchase).permit(:quantity)
-  end
-
-  def destroy
-    @purchase = Purchase.find(params[:id])
-    @purchase.delete
   end
 
 end

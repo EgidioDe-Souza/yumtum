@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/meals/:id/purchases/new', to: 'purchases#new' , as: 'new_purchase'
   post '/meals/:id/purchases', to: 'purchases#create', as:   'create_purchase'
   get '/purchases', to: 'purchases#index'
-  delete '/purchases/:id', to: 'purchases#destroy', as: 'delete'
+
+  resources :purchases, only: :destroy
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

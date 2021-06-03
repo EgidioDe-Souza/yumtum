@@ -1,10 +1,15 @@
 <div class="card-trip flex " >
+<<<<<<< HEAD
   <img src="http://lorempixel.com/400/300/food/?random=<%= @meal.id %>"/>
   <div>
   <h1><%= @meal.name %></h1>
   <h3><%= @meal.description %></h3>
   </div>
 
+=======
+
+  <h1><%= @meal.description %></h1>
+>>>>>>> b03dfbb6ca9d0ba76cfdcf3bbb92e38760c511ac
   <h1>£<%= @meal.price %></h1>
   <%= link_to 'Back', meals_path, class: "btn btn-flat m-3" %>
   <%= link_to 'Purchase', new_purchase_path, class: "btn btn-flat m-3"%>

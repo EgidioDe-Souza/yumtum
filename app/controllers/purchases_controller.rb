@@ -8,7 +8,10 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new
   end
 
-  def show;
+  def show
+    @buyer = current_user
+    @purchases = Purchase.
+
   end
 
   def create

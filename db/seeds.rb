@@ -1,10 +1,10 @@
 DatabaseCleaner.clean_with(:truncation)
-AREA = %w(BN1 GL18 TD7 SE19 BR4 DA9)
+AREA = %w(BN1 GL18 TD7 BR4)
 ALPH = ('A'..'Z').to_a
 
 # generate users
 count = 0
-128.times do
+16.times do
   email = Faker::Internet.email
   password = 'changeme'
   first_name = Faker::Name.first_name
@@ -18,7 +18,7 @@ count = 0
 end
 
 # generate meals
-2048.times do
+128.times do
   chef = User.where(chef: true).sample
   dish = Faker::Food.dish
   name = "#{chef.first_name}'s #{Faker::Hacker.adjective.capitalize} #{dish}"
@@ -31,7 +31,7 @@ end
 end
 
 # generate purchases
-512.times do
+24.times do
   quantity = rand(1..5)
   meal = Meal.all.sample
   buyer = User.where.not(id: meal.chef.id).sample

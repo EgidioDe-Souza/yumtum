@@ -10,6 +10,7 @@ class PurchasesController < ApplicationController
 
   def show
     @buyer = current_user
+    @purchases = Purchase.where(buyer_id: @buyer.id)
 
   end
 
@@ -21,7 +22,7 @@ class PurchasesController < ApplicationController
     @purchase.meal = @meal
     @purchase.buyer = @buyer
     @purchase.save
-    redirect_to purchases_path
+    redirect_to show_purchase_path
   end
 
 

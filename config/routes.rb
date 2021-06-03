@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   get '/purchases', to: 'purchases#index'
   get '/users/edit', to: 'users#edit', as: 'user_edit'
   patch '/users', to: 'users#update'
-
+  get '/purchases/:id', to: 'purchases#show', as: 'show_purchase'
   resources :purchases, only: :destroy
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

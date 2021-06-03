@@ -1,22 +1,31 @@
 
 <h1>Meals</h1>
 
-<div class="cards">
-<% @meals.each do |meal| %>
-<div class="card-meal">
-  <%= link_to show_meal_path(meal) do %>
-  <%= cl_image_tag("http://lorempixel.com/400/300/food/?random=sok0qq3xyf6cmfpnlgsp.jpg")%>
-  <%# <%= image_tag "http://lorempixel.com/400/300/food/?random=#{meal.id}"%> 
+<div class='search-feedback'>
+  <% if @meals.count == 0 %>
+    <div>
+      <p>Sorry, but there aren't any chefs in your local area just yet!</p>
+      <p class='sign-up-hint'>Try checking back later... or why not sign up as a chef yourself?</p>
+    </div>
+  <% else %>
+    <div><p>We found <%= @meals.count %> meals for sale from chefs in your local area!</p></div>
   <% end %>
-  <div class="card-meal-descr">
-      <div class="text">
-        <h3><%= meal.name %></h3>
-        <p><%= meal.description %></p>
+</div>
+
+<div class="cards">
+  <% @meals.each do |meal| %>
+    <div class="card-meal">
+      <%= link_to show_meal_path(meal) do %>
+        <%= cl_image_tag("http://lorempixel.com/400/300/food/?random=sok0qq3xyf6cmfpnlgsp.jpg") %>
+        <%# <%= image_tag "http://lorempixel.com/400/300/food/?random=#{meal.id}"%>
+      <% end %>
+      <div class="card-meal-descr">
+        <div class="text">
+          <h3><%= meal.name %></h3>
+          <p><%= meal.description %></p>
+        </div>
+        <h2 class="card-meal-pricing"><%= meal.price%></h2>
       </div>
-      <h2 class="card-meal-pricing"><%= meal.price%></h2>
-
-  </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
-</div>
-

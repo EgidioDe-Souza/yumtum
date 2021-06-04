@@ -3,9 +3,10 @@
   <%# <h1><%= @meal.name  </h1>%>
   <h3><%= @meal.description %></h3>
   <h1>£<%= @meal.price %></h1>
-  <div class="positioning-text">
-    <%= link_to 'Back', meals_path, class: "btn btn-flat " %>
-    <%= link_to 'Purchase', new_purchase_path, class: "btn btn-flat "%>
+<div class="positioning-text">
+
+  <%= link_to 'Back', back_path, class: "btn btn-flat m-3" %>
+  <%= link_to 'Purchase', new_purchase_path, class: "btn btn-flat m-3"%>
   </div>
 </div>
 

@@ -1,5 +1,5 @@
 <div class="card-trip flex " >
-  <%= cl_image_tag @meal.photo.key, height: 300, width: 400, crop: :fill %>
+  <%= image_tag "http://lorempixel.com/400/300/food/?random=#{meal.id}" %>
   <%# <h1><%= @meal.name  </h1>%>
   <h3><%= @meal.description %></h3>
   <h1>£<%= @meal.price %></h1>

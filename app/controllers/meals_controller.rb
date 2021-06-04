@@ -10,6 +10,13 @@ class MealsController < ApplicationController
     end
   end
 
+  def dashboard
+    @user = current_user
+    if @user.chef == true
+      @meals = Meal.where(chef_id: @user.id)
+    end
+  end
+
   def show; end
 
   def new

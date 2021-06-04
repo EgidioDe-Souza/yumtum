@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/meals', to: 'meals#index'
+  get '/dashboard', to: 'meals#dashboard',  as: 'dashboard'
   get '/meals/new', to: 'meals#new', as: 'new_meal'
   post '/meals', to: 'meals#create'
   get '/meals/:id', to: 'meals#show', as: 'show_meal'

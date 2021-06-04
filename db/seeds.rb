@@ -17,7 +17,7 @@ count = 0
   count += 1
 end
 
-generate meals
+# generate meals
 128.times do
   chef = User.where(chef: true).sample
   dish = Faker::Food.dish
@@ -30,7 +30,7 @@ generate meals
   puts "Meal created"
 end
 
-generate purchases
+# generate purchases
 24.times do
   quantity = rand(1..5)
   meal = Meal.all.sample

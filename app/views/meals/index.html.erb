@@ -21,7 +21,7 @@
   <% @meals.each do |meal| %>
     <div class="card-meal">
       <%= link_to show_meal_path(meal) do %>
-        <%= image_tag("http://lorempixel.com/400/300/food/#{meal.id % 10}") %>
+      <%= cl_image_tag meal.photo.key, height: 300, width: 400, crop: :fill %>
       <% end %>
       <div class="card-meal-descr">
         <div class="text">

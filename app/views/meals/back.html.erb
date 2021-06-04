@@ -1,9 +1,15 @@
+<h1>Meals</h1>
+
+<div class='search-feedback'>
+<div><p>We found <%= @meals.count %> meals for sale from chefs in your local area!</p></div>
+</div>
+
+
 <div class="cards">
   <% @meals.each do |meal| %>
     <div class="card-meal">
       <%= link_to show_meal_path(meal) do %>
-      <%= cl_image_tag meal.photo.key, height: 300, width: 400, crop: :fill %>
-        <%# <%= cl_image_tag "http://picsum.photos/400/300/?random=#{meal.id}"%>
+        <%= image_tag("http://lorempixel.com/400/300/food/#{meal.id % 10}") %>
       <% end %>
       <div class="card-meal-descr">
         <div class="text">
@@ -11,10 +17,7 @@
           <p><%= meal.description %></p>
         </div>
         <h2 class="card-meal-pricing"><%= meal.price%></h2>
-
       </div>
-
     </div>
   <% end %>
 </div>
-  <%= link_to 'Add a new meal', new_meal_path, class: "btn btn-flat m-3" %>

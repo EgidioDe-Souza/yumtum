@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  before_action :set_meal, only: [:show]
+  before_action :set_meal, only: [:show, :back]
 
   def index
     if params[:postcode] == ''
@@ -8,6 +8,11 @@ class MealsController < ApplicationController
       @postcode = params[:postcode].split.first
       @meals = Meal.search_by_chef_location(@postcode)
     end
+  end
+
+  def back
+    @postcode = @meal.chef.postcode.split.first
+    @meals = Meal.search_by_chef_location(@postcode)
   end
 
   def dashboard
@@ -41,6 +46,6 @@ class MealsController < ApplicationController
   end
 
   def meal_params
-    params.require(:meal).permit(:name, :description, :price)
+    params.require(:meal).permit(:name, :description, :price, :photo)
   end
 end

@@ -1,0 +1,34 @@
+<% @total = 0 %>
+
+<div class="contain">
+    <div class="receipt_box">
+      <div class="bod">
+        <div class="info">
+          <div class="welcome"><span class="username">👋 <%= @buyer.first_name %> </span></div>
+          <p>You're about to enjoy the following meals from your local talented yums</p>
+        </div>
+        <div class="cart">
+          <div class="title">cart</div>
+          <div class="content">
+            <ul class="cart_list">
+              <% @purchases.each do |purchase| %>
+
+              <li class="cart_item">
+                <span class="trash"><%= link_to ('<i class="far fa-trash-alt"></i>').html_safe, purchase_path(purchase), method: :delete %></span>
+                <span class="index"><%=purchase.quantity%></span>
+                <span class="name"><%=purchase.meal.name%></span>
+                <span class="price">£<%=purchase.meal.price * purchase.quantity %></span>
+<% @total += purchase.meal.price * purchase.quantity  %>
+              </li>
+             <% end %>
+
+            </ul>
+            <div class="total">
+              <span>total</span>
+              <span class="total_price">£<%= @total %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

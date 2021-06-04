@@ -17,25 +17,25 @@ count = 0
   count += 1
 end
 
-# generate meals
-# 128.times do
-#   chef = User.where(chef: true).sample
-#   dish = Faker::Food.dish
-#   name = "#{chef.first_name}'s #{Faker::Hacker.adjective.capitalize} #{dish}"
-#   description = "#{dish}, with #{Faker::Dessert.flavor} #{Faker::Dessert.variety}"
-#   price = "#{rand(1..24)}.99"
-#   chef = User.where(chef: true).sample
-#   puts "Creating #{name}, from #{chef.email}"
-#   Meal.create!(name: name, description: description, price: price, chef: chef)
-#   puts "Meal created"
-# end
+generate meals
+128.times do
+  chef = User.where(chef: true).sample
+  dish = Faker::Food.dish
+  name = "#{chef.first_name}'s #{Faker::Hacker.adjective.capitalize} #{dish}"
+  description = "#{dish}, with #{Faker::Dessert.flavor} #{Faker::Dessert.variety}"
+  price = "#{rand(1..24)}.99"
+  chef = User.where(chef: true).sample
+  puts "Creating #{name}, from #{chef.email}"
+  Meal.create!(name: name, description: description, price: price, chef: chef)
+  puts "Meal created"
+end
 
-# generate purchases
-# 24.times do
-#   quantity = rand(1..5)
-#   meal = Meal.all.sample
-#   buyer = User.where.not(id: meal.chef.id).sample
-#   puts "Creating purchase of #{quantity}x #{meal.name} from user #{buyer.email}"
-#   Purchase.create!(meal: meal, buyer: buyer, quantity: quantity)
-#   puts "Purchase created"
-# end
+generate purchases
+24.times do
+  quantity = rand(1..5)
+  meal = Meal.all.sample
+  buyer = User.where.not(id: meal.chef.id).sample
+  puts "Creating purchase of #{quantity}x #{meal.name} from user #{buyer.email}"
+  Purchase.create!(meal: meal, buyer: buyer, quantity: quantity)
+  puts "Purchase created"
+end

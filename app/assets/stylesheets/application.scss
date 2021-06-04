@@ -16,6 +16,7 @@
 @import "components/navbar";
 @import "pages/new";
 @import "components/logo";
+@import "components/form";
 @import "pages/receipt";
 
 html, body {
@@ -38,7 +39,7 @@ html, body {
 
 #main-content {
   padding-top: 50px;
-  min-height: calc(100vh - 118px);
+  min-height: calc(100vh - 146px);
 }
 
 #footer {
@@ -46,4 +47,16 @@ html, body {
    bottom: 0;
    width: 100%;
    height: 140px;
+}
+
+h1 {
+  padding: 8px 16px;
+  font-size: 36px;
+  text-align: center;
+}
+
+p {
+  padding: 6px 12px;
+  font-size: 24px;
+  text-align: center;
 }

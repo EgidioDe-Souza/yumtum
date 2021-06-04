@@ -28,7 +28,7 @@ class MealsController < ApplicationController
     @chef = current_user
     @meal.chef = @chef
     if @meal.save
-      redirect_to meals_path
+      redirect_to dashboard_path
     else
       render :new
     end

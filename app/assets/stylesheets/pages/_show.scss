@@ -5,7 +5,7 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-color: lightgray;
     border-style: solid;
-    margin: 60px 150px;
+    margin: 60px 100px;
     margin-bottom: 20px;
   }
 
@@ -15,25 +15,21 @@
     object-fit: cover;
   }
 
-  .card-trip h1 {
-    // font-size: 18px;
+  .card-trip > h1,h3 {
     font-size: 24px;
     font-weight: bold;
-    padding-bottom: 40px;
-
+    padding: 150px 24px;
   }
 
-  .card-trip p {
-    font-size: 12px;
-    opacity: 0.7;
-    margin: 0;
-    padding: 0px 240px;
-  }
   .flex  {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
     position: relative;
+  }
+  .positioning-text {
+    position: absolute;
+    margin-left: 70px;
   }
 
 

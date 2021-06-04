@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new
   end
 
-  def receipt
+  def show
     @buyer = current_user
     @purchases = Purchase.where(buyer_id: @buyer.id)
 
@@ -22,14 +22,14 @@ class PurchasesController < ApplicationController
     @purchase.meal = @meal
     @purchase.buyer = @buyer
     @purchase.save
-    redirect_to receipt_path
+    redirect_to show_purchase_path
   end
 
 
   def destroy
     purchase = Purchase.find(params[:id])
     purchase.destroy
-    redirect_to receipt_path
+    redirect_to purchases_path
   end
 
   def purchase_params

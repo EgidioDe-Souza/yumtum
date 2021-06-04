@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   patch '/users', to: 'users#update'
   get '/purchases/:id', to: 'purchases#receipt', as: 'receipt'
   resources :purchases, only: :destroy
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

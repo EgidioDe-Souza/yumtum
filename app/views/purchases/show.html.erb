@@ -1,0 +1,8 @@
+<% @purchases.each do |purchase| %>
+<%= link_to 'Delete', purchase_path(purchase), method: :delete %>
+
+<p>Meal: <%=purchase.meal.name%></p>
+<p>Quantity: <%=purchase.quantity%></p>
+<p>Price: <%=purchase.meal.price%></p>
+<p>Total: <%=purchase.meal.price * purchase.quantity %></p>
+<% end %>

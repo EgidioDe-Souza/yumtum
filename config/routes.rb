@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/meals', to: 'meals#index'
-  get '/meals/:id/back', to: 'meals#back', as: 'back'
   get '/dashboard', to: 'meals#dashboard',  as: 'dashboard'
   get '/meals/new', to: 'meals#new', as: 'new_meal'
   post '/meals', to: 'meals#create'
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
   get '/purchases', to: 'purchases#index'
   get '/users/edit', to: 'users#edit', as: 'user_edit'
   patch '/users', to: 'users#update'
-  get '/purchases/:id', to: 'purchases#receipt', as: 'receipt'
+  get '/purchases/:id', to: 'purchases#show', as: 'show_purchase'
   resources :purchases, only: :destroy
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

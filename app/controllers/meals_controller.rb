@@ -1,5 +1,5 @@
 class MealsController < ApplicationController
-  before_action :set_meal, only: [:show, :back]
+  before_action :set_meal, only: [:show]
 
   def index
     if params[:postcode] == ''
@@ -10,12 +10,6 @@ class MealsController < ApplicationController
     end
   end
 
-  def back
-    @postcode = @meal.chef.postcode.split.first
-    @meals = Meal.search_by_chef_location(@postcode)
-  end
-
-
   def dashboard
     @user = current_user
     if @user.chef == true
@@ -23,9 +17,7 @@ class MealsController < ApplicationController
     end
   end
 
-  def show;
-  end
-
+  def show; end
 
   def new
     @meal = Meal.new

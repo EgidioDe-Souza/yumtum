@@ -31,11 +31,11 @@ end
 # end
 
 # generate purchases
-24.times do
-  quantity = rand(1..5)
-  meal = Meal.all.sample
-  buyer = User.where.not(id: meal.chef.id).sample
-  puts "Creating purchase of #{quantity}x #{meal.name} from user #{buyer.email}"
-  Purchase.create!(meal: meal, buyer: buyer, quantity: quantity)
-  puts "Purchase created"
-end
+# 24.times do
+#   quantity = rand(1..5)
+#   meal = Meal.all.sample
+#   buyer = User.where.not(id: meal.chef.id).sample
+#   puts "Creating purchase of #{quantity}x #{meal.name} from user #{buyer.email}"
+#   Purchase.create!(meal: meal, buyer: buyer, quantity: quantity)
+#   puts "Purchase created"
+# end

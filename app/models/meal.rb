@@ -1,7 +1,5 @@
 class Meal < ApplicationRecord
   include PgSearch::Model
-  has_one_attached :photo
-
   belongs_to :chef, class_name: "User", foreign_key: "chef_id"
   has_many :purchases
   validates :name, presence: true, length: { minimum: 2, maximum: 255 }
